@@ -8,8 +8,9 @@ Example for August 29, 2026 where back prices are suddenly filled before jump wh
   <img src = "images/image_2026-09-05_162340899.png">
 </p>
 
-## How to use
+## How to run the backtest:
 
+1. Download historical data from the [Betfair Exchange history portal](https://historicdata.betfair.com.au). This downloads as a tar file which you would have to unpack into multiple folders. 
 
 
 
