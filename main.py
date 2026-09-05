@@ -140,8 +140,8 @@ def run_process(markets): #we wrap it in a function for later
             for flag in flags:
                 writer.writerow([
                     flag["market_id"], flag["selection_id"],flag["race_time"], flag["reference_price"], flag["reference_time"], #populate with the corresponding values
-                    flag["price_at_flag"],flag["time_at_flag"] ,flag["percentage_drop"], flag.get("actual_sp"),
-                    flag.get("outcome"), flag.get("result"),
+                    flag["price_at_flag"],flag["time_at_flag"] ,flag["percentage_drop"], flag["bsp"],
+                    flag["outcome"], flag["result"],
                 ])
 
     return strategy.total_flags, strategy.total_wealth
