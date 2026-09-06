@@ -8,13 +8,28 @@ Example for August 29, 2026 where back prices are suddenly filled before jump wh
   <img src = "images/image_2026-09-05_162340899.png">
 </p>
 
-## How to run the backtest:
+## How to run backtest:
 
 1. Download historical data from the [Betfair Exchange history portal](https://historicdata.betfair.com.au). This downloads as a tar file which you would have to unpack into multiple folders. You can reduce the size of the download by customising filters such as the market type and the country.
 
-<img src = "images/image_2026-09-06_000140354.png" height = 400>
-
+<p align = "center">
+  <img src = "images/image_2026-09-06_000140354.png" height = 400>
+</p>
 
 2.) Find this section of code and replace the path name with your path to the historical data.
+<p align = "center">
+  <img src = "images/image_2026-09-05_232600469.png">
+</p>
 
-<img src = "images/image_2026-09-05_232600469.png">
+3.) After running the code, it will return metrics such as the amount of bets placed and the cumulative wealth at the end of the backtest. 
+
+<img src = "images/image_2026-09-06_221704780.png">
+
+4.) You can also choose to plot the backtest via [Plots.py](Plots.py) 
+
+<img src = "images/image_2026-09-05_163018863.png">
+
+## Parameters:
+
+|Parameter                  | Description                                                                                  |
+|-----------------------------|----------------------------------------------------------------------------------------------|
