@@ -33,3 +33,10 @@ Example for August 29, 2026 where back prices are suddenly filled before jump wh
 
 |Parameter                  | Description                                                                                  |
 |-----------------------------|----------------------------------------------------------------------------------------------|
+| **Window_seconds/seconds_to_start**      | This denotes the amount of time before jump at which the algorithm will first trigger |
+| <p align = "center">**self.stake**</p>      | <p align = "center">This denotes the amount staked at the bookmaker</p>  |
+| <p align = "center">**self.commission**</p>      | <p align = "center">This denotes the commission taken by Betfair, usually 8% across metro racing in Australia with 10% for races in NSW and ACT </p>  |
+| <p align = "center">**percentage_drop**</p>      | <p align = "center">This denotes minimum percentage drop in lay prices required for a horse to be flagged </p>  |
+| <p align = "center">**current price**</p>      | <p align = "center"> This denotes the maximum lay price of the flagged horse </p>  |
+| <p align = "center">**market_types**</p>      | <p align = "center"> This denotes the type of market eg) Win, Tote, Exacta, Run 2nd refund, etc...</p>  |
+| <p align = "center">**country_codes**</p>      | <p align = "center"> This denotes the country where the races are taking place </p>  |
