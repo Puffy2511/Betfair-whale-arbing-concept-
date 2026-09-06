@@ -42,3 +42,10 @@ Example for August 29, 2026 where back prices are suddenly filled before jump wh
 | <p align = "center">**country_codes**</p>      | <p align = "center"> This denotes the country where the races are taking place </p>  |
 
 ## Installation
+
+```bash
+git clone https://github.com/Puffy2511/Betfair-whale-arbing-concept-.git
+
+pip install -r requirements.txt
+
+```
