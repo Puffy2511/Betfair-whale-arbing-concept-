@@ -80,6 +80,10 @@ A full month's of data takes a long time to run sequentially so to speed it up, 
 
 ## Visualisations
 
+<p align = "center">
+  <img src = "images/image_2026-09-05_163018863.png">
+</p>
+
 ## Limitations 😬
 
 * Historical bookmaker odds, specifically surrounding racing are hard to come by and are often stuck behind a paywall. What this means is that there is no way in which a bookmaker's back odds will ever be higher than betfair lay odds, simply due to bookmaker margin. This means that (within this model), it's overestimating the amount of profit it's expected to make.
