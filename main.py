@@ -103,7 +103,7 @@ class WhaleArb(BaseStrategy):
 
             flag["outcome"] = status_by_selection.get(racer_id)  #add element for win/loss
 
-            lay_stake = (self.stake * flag["reference_price"])/(flag["price_at_flag"]) #This is arb stake on betfair (MENTION LIMITATIONS tho)
+            lay_stake = (self.stake * flag["reference_price"])/(flag["price_at_flag"]-self.commission) #This is arb stake on betfair (MENTION LIMITATIONS tho)
             profit = lay_stake*(1-self.commission) - self.stake #how much we expect to make from both sides (bookie/betfair)
 
             flag["result"] = profit #add element for the outcome
