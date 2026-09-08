@@ -1,4 +1,4 @@
-(**PLEASE** read limitations. There is only so much you can do on free data 😭)
+(**PLEASE** read limitations)
 # Methodology (Backtesting)
 
 ## Data
@@ -13,11 +13,9 @@ Each market is only evaluated in the last 90 seconds before a race begins via co
 I chose this specific window since it leaves enough room for multiple data updates (BASIC updates every 60 seconds) and that markets on racing are typically the most liquid, especially at larger racing venues like Randwick and Doomben. This also means that there is enough liquidity for whales to get filled on back contracts which would provide an arbitrage opportunity if such an event happened. 
 
 <p align = "center">
-  (Insert link to betfair market context) 
-</p>
-<p align = "center">
   <img src = "images/image_2026-09-07_233144022.png" height = 400>
 </p>
+https://betfair-datascientists.github.io/tutorials/analysingAndPredictingMarketMovements/#221-traded-volumes
 
 For a market that does have a jump time within the 90 seconds, during each market update, we loop through each runner and track their selection id, last price traded and the time remaining till jump. Because we only have last price traded to rely upon, we track a "percentage" drop.
 
@@ -76,4 +74,17 @@ $$ Profit = S_{lay}*(1-t_{commission}) - S_{back} $$
 
 The profit of each flagged bet then gets appended to a cumulative wealth variable. 
 
+## Processing
+
+A full month's of data takes a long time to run sequentially so to speed it up, files are processed in parallel across multiple processes using 8 cpu cores. Results are written to a temp csv before the total results gets accumulated into a final csv sheet. The code for this part is a modified version of the written writeup in [Betfair Automation Hub part 5](https://betfair-datascientists.github.io/tutorials/How_to_Automate_5/)
+
+## Visualisations
+
+## Limitations 😬
+
+* Historical bookmaker odds, specifically surrounding racing are hard to come by and are often stuck behind a paywall. What this means is that there is no way in which a bookmaker's back odds will ever be higher than betfair lay odds, simply due to bookmaker margin. This means that (within this model), it's overestimating the amount of profit it's expected to make.
+* Basic data only allow 1 minute updates which in terms of market movement, is an eternity. This means that bookmakers would've typically adjusted to the change in price accordingly within that amount of time.
+* There isn't really an order simulation. Because basic data lacks the volume ladder, this backtest assumes that any lay order will be filled fully which for smaller races, sometimes isn't true. Also this really limits any sort of signal for this model as it means you have to rely on last price traded as the only signal.
+
+Will be doing a fix later though because I realise now that 2015-2016 data for overseas racing is free across all tiers. While this does go against the point of arbing on Australian bookmakers, it could be interesting if the model were able to pick up on price movements within the shorter timespan.
 
