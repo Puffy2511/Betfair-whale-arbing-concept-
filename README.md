@@ -1,3 +1,4 @@
+(This is a WIP, improvements can be made given I have time) 
 # About
 This project is a proof of concept that uses the Flumine and Betfairlightweight API to identify whale behaviour in lay prices and calculate arbitrage between lay prices and delayed bookmaker odds. Below is one such example. This is a VERY simplified model and as such, isn't efficient irl.
 
