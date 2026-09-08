@@ -9,4 +9,6 @@ I can possibly use to flag.
 ## Flagging logic 
 
 Each market is only evaluated in the last 90 seconds before a race begins via controlling **window_seconds** and **seconds_to_start** parameters with in-play updates excluded. 
-I chose this specific window since it leaves enough room for multiple data updates (BASIC updates every 60 seconds) and that markets on racing are typically the most liquid (see **Fig 1**), especially at larger racing venues like Randwick and Doomben.
+I chose this specific window since it leaves enough room for multiple data updates (BASIC updates every 60 seconds) and that markets on racing are typically the most liquid, especially at larger racing venues like Randwick and Doomben.
+
+
