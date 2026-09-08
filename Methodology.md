@@ -51,7 +51,7 @@ $$\
 \
 $$
 
-or equivalently
+or equivalently,
 
 $$\
 Amount =  
