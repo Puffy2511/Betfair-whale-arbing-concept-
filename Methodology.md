@@ -82,6 +82,8 @@ A full month's of data takes a long time to run sequentially so to speed it up, 
 
 <p align = "center">
   <img src = "images/image_2026-09-05_163018863.png">
+  <img src = "images/image_2026-09-05_163200941.png">
+  <img src = "images/image_2026-09-08_215843378.png">
 </p>
 
 ## Limitations 😬
